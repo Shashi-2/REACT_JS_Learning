@@ -5,9 +5,13 @@
 _1.	Intro_
 
   •	React is a JavaScript library for building user interfaces.
+  
   •	React is used to build single-page applications.
+  
   •	React allows us to create reusable UI components.
+  
   •	React is JS library created by Facebook.
+  
   •	Latest Version is 16.8.6 on 27 March 2019. 
   
 _2.	Working_
@@ -22,15 +26,16 @@ _3.	Setting up Development Environment_
  
   •	After installing we will create a react application Using below command.
   
-**CMD :-  npm i/install create-react-app FileName **  
+**CMD :-  npm i/install create-react-app FileName**  
 
   •	To run the react app we will use following command.
 
-**CMD :- npm start **
+**CMD :- npm start**
 
 _4.	File Structure_
 
   Main_folder
+  
     1.	Node_Modules_folder :In which many modules Folder and File are there.
     
     2.	Public_Folder :
