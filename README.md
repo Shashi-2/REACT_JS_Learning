@@ -172,7 +172,7 @@ _6.	Render HTML_
             );
             ReactDOM.render(myelement, document.getElementById('root'));  //to display the HTML code
             
-_7.	 JSX_
+__7.	 JSX__
 
         JSX stands for JavaScript XML.
         
