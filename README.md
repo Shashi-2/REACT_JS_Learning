@@ -190,3 +190,140 @@ __7.	 JSX__
             );
           const root = ReactDOM.createRoot(document.getElementById('root'));
           root.render(myElement);
+          
+          
+__8.	React Component__
+
+          •	Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+          •	Components come in two types, Class components and Function components.
+
+       **Class Component**
+
+          o	When creating a React component, the component's name must start with an upper case letter.
+
+          o	The component has to include the extends React.Component statement, this statement creates an inheritance to React.Component, and gives your                 component access to React.Component's functions.
+
+          o	The component also requires a render() method, this method returns HTML.
+
+          Ex :-
+              class Car extends React.Component {
+                render() {
+                  return <h2>Hi, I am a Car!</h2>;
+                }
+              }
+
+              const root = ReactDOM.createRoot(document.getElementById('root'));
+              root.render(<Car />);
+
+                a)	Constructor with state(Component Properties  as object)
+
+                Ex :-
+                    class Car extends React.Component {
+                      constructor() {
+                        super();
+                        this.state = {color: "red"};
+                      }
+                      render() {
+                        return <h2>I am a {this.state.color} Car!</h2>;
+                      }
+                    }  
+
+                    const root = ReactDOM.createRoot(document.getElementById('root'));
+                    root.render(<Car />);.
+
+                b)	Props in the Constructor
+
+                Ex :-
+
+                    class Car extends React.Component {
+                      constructor(props) {
+                        super(props);
+                      }
+                      render() {
+                        return <h2>I am a {this.props.model}!</h2>;
+                      }
+                    }
+
+                    const root = ReactDOM.createRoot(document.getElementById('root'));
+                    root.render(<Car model="Mustang"/>); 
+
+                c)	React Class Component State
+
+                  I.	React Class components have a built-in state object.
+
+                  II.	The state object is where you store property values that belongs to the component.
+
+                  III.	When the state object changes, the component re-renders.
+
+                Ex:-
+
+                    class Car extends React.Component {
+                      constructor(props) {
+                        super(props);
+                        this.state = {
+                          brand: "Ford",
+                          model: "Mustang",
+                          color: "red",
+                          year: 1964
+                        }
+                      }
+                      render() {
+                        return (
+                          <div>
+                            <h1>My Car</h1>
+                          </div>
+                        );
+                      }
+                    }
+
+
+                d)	Changing the state Object
+
+                  o	To change a value in the state object, use the this.setState() method.
+
+                  o	When a value in the state object changes, the component will re-render, meaning that the output will change according to the new                            value(s).
+
+                Ex:-
+                    class Car extends React.Component {
+                      constructor(props) {
+                        super(props);
+                        this.state = {
+                          brand: "Ford",
+                          model: "Mustang",
+                          color: "red",
+                          year: 1964
+                        };
+                      }
+                      changeColor = () => {
+                        this.setState({color: "blue"});
+                      }
+                      render() {
+                        return (
+                          <div>
+                            <h1>My {this.state.brand}</h1>
+                            <p>
+                              It is a {this.state.color}
+                              {this.state.model}
+                              from {this.state.year}.
+                            </p>
+                            <button
+                              type="button"
+                              onClick={this.changeColor}
+                            >Change color</button>
+                          </div>
+                        );
+                      }
+                }
+
+
+          **Function Component**
+
+          Ex:-
+
+              function Car() {
+                return <h2>I am a red Car!</h2>;
+              }
+
+              const root = ReactDOM.createRoot(document.getElementById('root'));
+              root.render(<Car />);
